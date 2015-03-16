@@ -1,0 +1,55 @@
+.settings/
+bin/*
+gen/*
+keystore/
+local.properties
+
+#ignore IntelliJ IDEA file
+.idea/
+*.iml
+out/
+
+#ignore build files
+build/*
+**/.gradle/*
+gradle.properties
+mapping.txt
+seeds.txt
+
+android-app.keystore
+ship.sh
+installRelease.sh
+dumpMem.sh
+cheneeispig_hm.zip
+
+lint.xml
+
+src/cn/com/smartdevices/sed.sh
+
+#ignore Mac OS files
+.DS_Store
+*~
+log.sh
+Errorlog.sh
+
+# ignore Mac OS files
+._*
+zipString.sh
+
+tmp_armeabi/
+
+# ignore GreenDao generator tmp files
+tools/DaoBraceletGenerator/.gradle/
+tools/DaoBraceletGenerator/build/
+
+# ignore all build, bin, and gen folders
+**/**/build/
+**/**/bin/
+**/**/gen/
+**/**/proguard/
+
+documents/mapping-Normal.txt
+base/httpclient/proguard-project.txt
+dependence/imagecropper/proguard-project.txt
+dependence/wheelview/proguard-project.txt
+main/phone/fetch.sh
