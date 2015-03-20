@@ -1,8 +1,8 @@
 package com.example.madroid.studydemo.ui;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,13 +37,14 @@ public class MainActivity extends ActionBarActivity {
                         startActivity(new Intent(getApplicationContext(),RippleBackgroundActivity.class));
                         break;
                     case 1 :
+                        startActivity(new Intent(getApplicationContext(),rippleActivity.class));
                         break;
                     default:
                         break;
                 }
             }
         });
-        mData = new String[] {"ripple background",""} ;
+        mData = new String[] {"ripple background","Ripple view"} ;
         mAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,mData) ;
         mListView.setAdapter(mAdapter);
     }

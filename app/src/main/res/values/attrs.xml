@@ -13,4 +13,18 @@
             <enum name="strokeRipple" value="1"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="RippleView">
+        <attr name="enable" format="boolean"/>
+        <attr name="rippleNumber" format="integer" />
+        <attr name="duration" format="integer" />
+        <attr name="ripple_scale_from" format="float" />
+        <attr name="ripple_scale_to" format="float" />
+        <attr name="ripple_color" format="color" />
+        <attr name="ripple_type" format="enum" >
+            <enum name="fillRipple" value="1" />
+            <enum name="strokeRipple" value="0" />
+        </attr>
+
+    </declare-styleable>
 </resources>

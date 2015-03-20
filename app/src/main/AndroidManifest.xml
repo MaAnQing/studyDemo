@@ -20,6 +20,10 @@
             android:name=".ui.RippleBackgroundActivity"
             android:label="@string/title_activity_ripple_background" >
         </activity>
+        <activity
+            android:name=".ui.rippleActivity"
+            android:label="@string/title_activity_ripple" >
+        </activity>
     </application>
 
 </manifest>
