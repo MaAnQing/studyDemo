@@ -88,13 +88,12 @@ public class RippleView extends View{
         canvas.drawCircle(540,540,64,mPaint);
         canvas.drawCircle(540,540,128,mPaint);
 
-        Thread animationThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                canvas.drawCircle(540,540,128,mPaint);
-
-            }
-        }) ;
+//        Thread animationThread = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                canvas.drawCircle(540,540,128,mPaint);
+//            }
+//        }) ;
 
 //        for(int i=0;i<rippleNumber;i++){
 //            ValueAnimator animator = ValueAnimator.ofFloat(rippleRadius ,540) ;

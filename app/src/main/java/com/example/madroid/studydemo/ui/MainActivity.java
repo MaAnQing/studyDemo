@@ -39,12 +39,15 @@ public class MainActivity extends ActionBarActivity {
                     case 1 :
                         startActivity(new Intent(getApplicationContext(),rippleActivity.class));
                         break;
+                    case 2 :
+                        startActivity(new Intent(getApplicationContext(),SurfaceViewActivity.class));
+                        break;
                     default:
                         break;
                 }
             }
         });
-        mData = new String[] {"ripple background","Ripple view"} ;
+        mData = new String[] {"ripple background","Ripple view","surface view"} ;
         mAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,mData) ;
         mListView.setAdapter(mAdapter);
     }

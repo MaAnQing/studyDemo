@@ -24,6 +24,10 @@
             android:name=".ui.rippleActivity"
             android:label="@string/title_activity_ripple" >
         </activity>
+        <activity
+            android:name=".ui.SurfaceViewActivity"
+            android:label="@string/title_activity_surface_view" >
+        </activity>
     </application>
 
 </manifest>

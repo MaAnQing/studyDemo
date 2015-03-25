@@ -6,4 +6,5 @@
     <string name="title_activity_ripple_background">RippleBackgroundActivity</string>
     <string name="title_activity_ripple_view">RippleView</string>
     <string name="title_activity_ripple">rippleActivity</string>
+    <string name="title_activity_surface_view">SurfaceViewActivity</string>
 </resources>
