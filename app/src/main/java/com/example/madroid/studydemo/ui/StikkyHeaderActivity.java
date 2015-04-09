@@ -3,19 +3,24 @@ package com.example.madroid.studydemo.ui;
 import android.app.Fragment;
 import android.content.Intent;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.ui.tikkyheader.SimpleStikkyFragment;
 
 public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHeaderFragment.OnFragmentInteractionListener {
 
+    private static final String TAG = "StikkyHeaderActivity";
 
 
     @Override
@@ -31,10 +36,22 @@ public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHea
                 replace(R.id.layout_container, fragment, fragment.getClass().getName())
                 .addToBackStack(fragment.getClass().getName())
                 .commit();
+        Log.i(TAG , "loadFragment name: " + fragment.getClass().getName()) ;
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
+    public void onFragmentInteraction(int id) {
 
+        Fragment fragment = new Fragment() ;
+        switch (id){
+            case 0 :
+                fragment = new SimpleStikkyFragment() ;
+                Log.i("madroid" ,"onclick") ;
+                break;
+            default:
+                break;
+        }
+
+        loadFragment(fragment);
     }
 }

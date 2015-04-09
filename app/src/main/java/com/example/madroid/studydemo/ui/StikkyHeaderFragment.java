@@ -77,9 +77,9 @@ public class StikkyHeaderFragment extends Fragment {
     }
 
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    public void onButtonPressed(int id) {
         if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+            mListener.onFragmentInteraction(id);
         }
     }
 
@@ -88,22 +88,23 @@ public class StikkyHeaderFragment extends Fragment {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0 :
-                        startActivity(new Intent(getActivity(), RippleBackgroundActivity.class));
-                        break;
-                    case 1 :
-                        startActivity(new Intent(getActivity(), rippleActivity.class));
-                        break;
-                    case 2 :
-                        startActivity(new Intent(getActivity(), SurfaceViewActivity.class));
-                        break;
-                    case 3 :
-                        startActivity(new Intent(getActivity(), StikkyHeaderActivity.class));
-                        break;
-                    default:
-                        break;
-                }
+                onButtonPressed(position);
+//                switch (position){
+//                    case 0 :
+//                        startActivity(new Intent(getActivity(), RippleBackgroundActivity.class));
+//                        break;
+//                    case 1 :
+//                        startActivity(new Intent(getActivity(), rippleActivity.class));
+//                        break;
+//                    case 2 :
+//                        startActivity(new Intent(getActivity(), SurfaceViewActivity.class));
+//                        break;
+//                    case 3 :
+//                        startActivity(new Intent(getActivity(), StikkyHeaderActivity.class));
+//                        break;
+//                    default:
+//                        break;
+//                }
             }
         });
         mData = getResources().getStringArray(R.array.stikky_header_title) ;
@@ -147,7 +148,7 @@ public class StikkyHeaderFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Uri uri);
+        public void onFragmentInteraction(int id);
     }
 
 }
