@@ -20,6 +20,7 @@ import com.example.madroid.studydemo.ui.tikkyheader.ActionBarImageFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.IO2014HeaderFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.ParallaxStikkyFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.RecyclerStikkyFragment;
+import com.example.madroid.studydemo.ui.tikkyheader.SimpleScrollViewFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.SimpleStikkyFragment;
 
 public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHeaderFragment.OnFragmentInteractionListener {
@@ -62,6 +63,9 @@ public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHea
                 break;
             case 4 :
                 fragment = new RecyclerStikkyFragment() ;
+                break;
+            case 5 :
+                fragment = new SimpleScrollViewFragment() ;
                 break;
             default:
                 break;
