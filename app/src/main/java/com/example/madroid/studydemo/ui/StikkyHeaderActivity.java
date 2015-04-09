@@ -17,6 +17,7 @@ import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.ui.tikkyheader.ActionBarImageFragment;
+import com.example.madroid.studydemo.ui.tikkyheader.IO2014HeaderFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.ParallaxStikkyFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.SimpleStikkyFragment;
 
@@ -54,6 +55,9 @@ public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHea
                 break;
             case 2 :
                 fragment = new ActionBarImageFragment() ;
+                break;
+            case 3 :
+                fragment = new IO2014HeaderFragment() ;
                 break;
             default:
                 break;

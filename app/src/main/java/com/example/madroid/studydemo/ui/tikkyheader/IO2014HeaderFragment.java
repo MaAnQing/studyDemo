@@ -10,18 +10,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
-import com.example.madroid.studydemo.view.stikkyheader.AnimatorBuilder;
-import com.example.madroid.studydemo.view.stikkyheader.BaseStickyHeaderAnimator;
-import com.example.madroid.studydemo.view.stikkyheader.HeaderStikkyAnimator;
+import com.example.madroid.studydemo.view.stikkyheader.IO2014HeaderAnimator;
 import com.example.madroid.studydemo.view.stikkyheader.StikkyHeaderBuilder;
 
 
-public class ActionBarImageFragment extends Fragment {
+public class IO2014HeaderFragment extends Fragment {
 
-    private View mHomeView;
     private ListView mListView;
 
-    public ActionBarImageFragment() {
+    public IO2014HeaderFragment() {
         // Required empty public constructor
     }
 
@@ -29,50 +26,30 @@ public class ActionBarImageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_actionbarimage, container, false);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_io2014, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mListView = (ListView) view.findViewById(R.id.listview);
-        //id 不对
-        //mHomeView = getActivity().findViewById(android.R.id.home);
-        mHomeView = getActivity().findViewById(R.id.header_image);
-
+        mListView = (ListView) getView().findViewById(R.id.listview);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-
-        BaseStickyHeaderAnimator animator = new HeaderStikkyAnimator() {
-
-            @Override
-            public AnimatorBuilder getAnimatorBuilder() {
-
-                View mViewToAnimate = getHeader().findViewById(R.id.header_image);
-
-                AnimatorBuilder animatorBuilder = AnimatorBuilder.create()
-                        .applyScale(mViewToAnimate, AnimatorBuilder.buildViewRect(mHomeView))
-                        .applyTranslation(mViewToAnimate, AnimatorBuilder.buildPointView(mHomeView))
-                        .applyFade(mViewToAnimate, 1f);
-
-
-                return animatorBuilder;
-            }
-        };
+        IO2014HeaderAnimator animator = new IO2014HeaderAnimator(getActivity());
 
         StikkyHeaderBuilder.stickTo(mListView)
                 .setHeader(R.id.header, (ViewGroup) getView())
-                .minHeightHeader(250)
+                .minHeightHeaderDim(R.dimen.min_height_header_materiallike)
                 .animator(animator)
                 .build();
 
         populateListView();
-
     }
 
     private void populateListView() {
@@ -83,7 +60,6 @@ public class ActionBarImageFragment extends Fragment {
         }
 
         mListView.setAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, elements));
-
     }
 
 }
