@@ -37,7 +37,7 @@ public class ActionBarImageFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mListView = (ListView) view.findViewById(R.id.listview);
-        //id 不对
+        //id 不对 , android.R.id.home is ActionBar icon id
         //mHomeView = getActivity().findViewById(android.R.id.home);
         mHomeView = getActivity().findViewById(R.id.header_image);
 
