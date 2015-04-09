@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.ui.tikkyheader.ParallaxStikkyFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.SimpleStikkyFragment;
 
 public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHeaderFragment.OnFragmentInteractionListener {
@@ -46,8 +47,9 @@ public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHea
         switch (id){
             case 0 :
                 fragment = new SimpleStikkyFragment() ;
-                Log.i("madroid" ,"onclick") ;
                 break;
+            case 1 :
+                fragment = new ParallaxStikkyFragment() ;
             default:
                 break;
         }

@@ -4,4 +4,9 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="rippleStrokeWidth">2dp</dimen>
     <dimen name="rippleRadius">64dp</dimen>
+
+    <dimen name="min_height_textheader_materiallike">62dp</dimen>
+    <dimen name="min_height_header_materiallike">100dp</dimen>
+    <dimen name="min_height_header">120dp</dimen>
+    <dimen name="max_height_header">300dp</dimen>
 </resources>
