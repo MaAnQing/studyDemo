@@ -28,6 +28,10 @@
             android:name=".ui.SurfaceViewActivity"
             android:label="@string/title_activity_surface_view" >
         </activity>
+        <activity
+            android:name=".ui.StikkyHeaderActivity"
+            android:label="@string/title_activity_stikky_header" >
+        </activity>
     </application>
 
 </manifest>

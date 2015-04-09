@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
+import com.example.madroid.studydemo.ui.StikkyHeaderActivity;
 import com.example.madroid.studydemo.ui.SurfaceViewActivity;
 import com.example.madroid.studydemo.ui.rippleActivity;
 
@@ -37,13 +38,16 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0 :
-                        startActivity(new Intent(getApplicationContext(),RippleBackgroundActivity.class));
+                        startActivity(new Intent(getApplicationContext(), RippleBackgroundActivity.class));
                         break;
                     case 1 :
-                        startActivity(new Intent(getApplicationContext(),rippleActivity.class));
+                        startActivity(new Intent(getApplicationContext(), rippleActivity.class));
                         break;
                     case 2 :
-                        startActivity(new Intent(getApplicationContext(),SurfaceViewActivity.class));
+                        startActivity(new Intent(getApplicationContext(), SurfaceViewActivity.class));
+                        break;
+                    case 3 :
+                        startActivity(new Intent(getApplicationContext(), StikkyHeaderActivity.class));
                         break;
                     default:
                         break;
@@ -55,5 +59,5 @@ public class MainActivity extends ActionBarActivity {
         mListView.setAdapter(mAdapter);
     }
 
-    
+
 }

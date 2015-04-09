@@ -4,5 +4,15 @@
         <item>ripple background</item>
         <item>ripple view</item>
         <item>surface view</item>
+        <item>stikkyHeader</item>
+    </string-array>
+
+    <string-array name="stikky_header_title">
+        <item>Simple Stikky Header</item>
+        <item>Parallax Simple Stikky Header</item>
+        <item>ActionBarImage Header Animatior</item>
+        <item>I/O 2014 Header Animatior</item>
+        <item>Recycler View Header</item>
+        <item>Scroll View Header</item>
     </string-array>
 </resources>

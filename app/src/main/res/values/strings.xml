@@ -7,4 +7,10 @@
     <string name="title_activity_ripple_view">RippleView</string>
     <string name="title_activity_ripple">rippleActivity</string>
     <string name="title_activity_surface_view">SurfaceViewActivity</string>
+    <string name="title_activity_stikky_header">StikkyHeaderActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main_activity2">MainActivity2Activity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
