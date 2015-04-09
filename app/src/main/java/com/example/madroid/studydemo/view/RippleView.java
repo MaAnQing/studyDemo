@@ -1,4 +1,4 @@
-package com.example.madroid.studydemo.ui;
+package com.example.madroid.studydemo.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;

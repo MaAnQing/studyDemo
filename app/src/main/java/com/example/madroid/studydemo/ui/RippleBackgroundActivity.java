@@ -11,6 +11,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.view.RippleBackground;
 
 import java.util.ArrayList;
 

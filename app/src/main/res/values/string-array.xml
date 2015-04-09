@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_title">
+        <item>ripple background</item>
+        <item>ripple view</item>
+        <item>surface view</item>
+    </string-array>
+</resources>

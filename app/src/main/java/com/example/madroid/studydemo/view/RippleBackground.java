@@ -1,4 +1,4 @@
-package com.example.madroid.studydemo.ui;
+package com.example.madroid.studydemo.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
