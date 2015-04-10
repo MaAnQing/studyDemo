@@ -15,7 +15,7 @@ public abstract class HeaderAnimator {
         return Math.max(min, Math.min(value, max));
     }
 
-    public abstract void onScroll(final int scrolledY);
+    public abstract void onScroll(final int scrolledY , int scrollState);
 
     /**
      * Called by the {@link it.carlom.stikkyheader.core.StikkyHeader} to set the {@link HeaderAnimator} up

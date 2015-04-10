@@ -50,7 +50,7 @@ public class StikkyHeaderScrollView extends StikkyHeader {
             @Override
             public void onScrollChanged() {
 
-                mHeaderAnimator.onScroll(-mScrollView.getScrollY());
+                mHeaderAnimator.onScroll(-mScrollView.getScrollY() ,0);
 
             }
         });

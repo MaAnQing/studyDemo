@@ -6,10 +6,13 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.IdRes;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ScrollView;
+
+import java.io.StringWriter;
 
 
 public abstract class StikkyHeaderBuilder {
@@ -19,6 +22,7 @@ public abstract class StikkyHeaderBuilder {
     protected View mHeader;
     protected int mMinHeight;
     protected HeaderAnimator mAnimator;
+    private static final String TAG = "StikkyHeader" ;
 
     protected StikkyHeaderBuilder(final Context context) {
         mContext = context;
@@ -39,11 +43,13 @@ public abstract class StikkyHeaderBuilder {
 
     public StikkyHeaderBuilder setHeader(@IdRes final int idHeader, final ViewGroup view) {
         mHeader = view.findViewById(idHeader);
+        Log.i(TAG , "header height : " + mHeader.getHeight()) ;
         return this;
     }
 
     public StikkyHeaderBuilder setHeader(final View header) {
         mHeader = header;
+        Log.i(TAG , "header height : " + mHeader.getHeight()) ;
         return this;
     }
 

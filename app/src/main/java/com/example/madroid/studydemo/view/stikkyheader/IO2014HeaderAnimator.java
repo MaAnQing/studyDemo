@@ -62,8 +62,8 @@ public class IO2014HeaderAnimator extends HeaderStikkyAnimator {
     }
 
     @Override
-    public void onScroll(int scrolledY) {
-        super.onScroll(scrolledY);
+    public void onScroll(int scrolledY , int state) {
+        super.onScroll(scrolledY ,state);
         float translatedY = getHeader().getTranslationY();
 
         float visibleHeightHeader = getHeightHeader() + translatedY;

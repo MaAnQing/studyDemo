@@ -110,13 +110,20 @@ public class StikkyHeaderRecyclerView extends StikkyHeader {
 
     private class OnScrollListenerRecycler extends RecyclerView.OnScrollListener {
 
+        private int mState ;
 
         @Override
         public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
             super.onScrolled(recyclerView, dx, dy);
 
             mScrolledY += dy;
-            mHeaderAnimator.onScroll(-mScrolledY);
+            mHeaderAnimator.onScroll(-mScrolledY,mState);
+        }
+
+        @Override
+        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            super.onScrollStateChanged(recyclerView, newState);
+            mState = newState  ;
         }
     }
 

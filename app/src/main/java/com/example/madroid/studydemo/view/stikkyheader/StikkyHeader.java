@@ -1,6 +1,7 @@
 package com.example.madroid.studydemo.view.stikkyheader;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -28,6 +29,7 @@ public abstract class StikkyHeader {
                     mHeader.getViewTreeObserver().removeGlobalOnLayoutListener(this);
                     int height = mHeader.getHeight();
                     setHeightHeader(height);
+                    Log.i("StikkyHeader", "height: " + height) ;
 
                 }
             });
