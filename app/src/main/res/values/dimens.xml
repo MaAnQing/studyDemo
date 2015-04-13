@@ -9,4 +9,30 @@
     <dimen name="min_height_header_materiallike">100dp</dimen>
     <dimen name="min_height_header">120dp</dimen>
     <dimen name="max_height_header">300dp</dimen>
+
+    <dimen name="mili_normal_txt_size">14.5sp</dimen>
+    <dimen name="round_bg_stroke">0.3dp</dimen>
+    <dimen name="round_bg_radius">4dp</dimen>
+    <dimen name="btn_bg_radius">20dp</dimen>
+    <dimen name="btn_bg_radius_small">4dp</dimen>
+    <dimen name="click_button_text_size">13sp</dimen>
+    <dimen name="dialog_title_margin_bottom">9dp</dimen>
+    <dimen name="click_button_h">40dp</dimen>
+    <dimen name="mili_margin">22.5dp</dimen>
+    <dimen name="stroke_width_minus">-0.3dp</dimen>
+    <dimen name="click_button_w">268dp</dimen>
+    <dimen name="round_btn_radius">20dp</dimen>
+    <dimen name="font_size_f1">14sp</dimen>
+    <dimen name="font_size_f2">12sp</dimen>
+    <dimen name="font_size_f3">11sp</dimen>
+    <dimen name="font_size_f4">10sp</dimen>
+    <dimen name="action_bar_h">45dp</dimen>
+    <dimen name="common_list_item_left_right_padding">22.5dp</dimen>
+    <dimen name="item_height">49dp</dimen>
+    <dimen name="dynamic_info_width">110dp</dimen>
+    <dimen name="dynamic_info_height">67dp</dimen>
+    <dimen name="dynamic_info_title">11sp</dimen>
+    <dimen name="dynamic_info_value">15sp</dimen>
+    <dimen name="common_list_item_main_font">15sp</dimen>
+    <dimen name="share_pane_margin">55dp</dimen>
 </resources>

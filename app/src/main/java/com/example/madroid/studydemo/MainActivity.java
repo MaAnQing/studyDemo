@@ -12,6 +12,7 @@ import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
+import com.example.madroid.studydemo.ui.ScrollViewActivity;
 import com.example.madroid.studydemo.ui.StikkyHeaderActivity;
 import com.example.madroid.studydemo.ui.SurfaceViewActivity;
 import com.example.madroid.studydemo.ui.rippleActivity;
@@ -49,6 +50,8 @@ public class MainActivity extends ActionBarActivity {
                     case 3 :
                         startActivity(new Intent(getApplicationContext(), StikkyHeaderActivity.class));
                         break;
+                    case 4 :
+                        startActivity(new Intent(getApplicationContext(), ScrollViewActivity.class));
                     default:
                         break;
                 }
