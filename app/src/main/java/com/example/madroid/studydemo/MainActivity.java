@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
 import com.example.madroid.studydemo.ui.ScrollViewActivity;
 import com.example.madroid.studydemo.ui.StikkyHeaderActivity;
@@ -52,6 +53,8 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     case 4 :
                         startActivity(new Intent(getApplicationContext(), ScrollViewActivity.class));
+                    case 5 :
+                        startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class));
                     default:
                         break;
                 }

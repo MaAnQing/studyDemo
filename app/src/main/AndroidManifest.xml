@@ -36,6 +36,10 @@
             android:name=".ui.ScrollViewActivity"
             android:label="@string/title_activity_scroll_view" >
         </activity>
+        <activity
+            android:name=".ui.RecyclerViewActivity"
+            android:label="@string/title_activity_recycler_view" >
+        </activity>
     </application>
 
 </manifest>
