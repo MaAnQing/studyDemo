@@ -4,15 +4,21 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView.ItemDecoration;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.adapter.MyRecyclerAdapter;
+import com.example.madroid.studydemo.listener.RecyclerViewItemClickedListener;
+import com.example.madroid.studydemo.listener.RecyclerViewItemLongClickedListener;
 import com.example.madroid.studydemo.model.RecyclerItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewActivity extends ActionBarActivity {
+public class RecyclerViewActivity extends ActionBarActivity implements RecyclerViewItemClickedListener,RecyclerViewItemLongClickedListener{
 
 
     private RecyclerView mRecyclerView;
@@ -37,7 +43,13 @@ public class RecyclerViewActivity extends ActionBarActivity {
         mRecyclerView.setHasFixedSize(true);
 
         mAdapter = new MyRecyclerAdapter(getDadaSet()) ;
+        mAdapter.setOnItemClickedListener(this);
+        mAdapter.setOnItemLongClickedListener(this);
         mRecyclerView.setAdapter(mAdapter);
+
+        //ItemDecoration decoration = new ItemDecoration();
+        //mRecyclerView.addItemDecoration(decoration);
+
     }
 
     private List<RecyclerItem> getDadaSet(){
@@ -49,5 +61,18 @@ public class RecyclerViewActivity extends ActionBarActivity {
             dataSet.add(item);
         }
         return dataSet ;
+    }
+
+    @Override
+    public void onItemClick(View view, int position) {
+        Toast.makeText(this,"onClicked",Toast.LENGTH_LONG).show();
+        Log.i("madroid", "onclick") ;
+    }
+
+    @Override
+    public void onItemLongClick(View view, int position) {
+        Toast.makeText(this,"onLongClicked",Toast.LENGTH_LONG).show();
+        Log.i("madroid", "onclick") ;
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.madroid.studydemo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -24,11 +25,13 @@ public class MainActivity extends ActionBarActivity {
     private ListView mListView ;
     private ArrayAdapter<String> mAdapter ;
     private String[] mData ;
+    private Context mContext ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = getApplicationContext() ;
         initView();
 
     }
@@ -40,22 +43,22 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0 :
-                        startActivity(new Intent(getApplicationContext(), RippleBackgroundActivity.class));
+                        startActivity(new Intent(mContext, RippleBackgroundActivity.class));
                         break;
                     case 1 :
-                        startActivity(new Intent(getApplicationContext(), rippleActivity.class));
+                        startActivity(new Intent(mContext, rippleActivity.class));
                         break;
                     case 2 :
-                        startActivity(new Intent(getApplicationContext(), SurfaceViewActivity.class));
+                        startActivity(new Intent(mContext, SurfaceViewActivity.class));
                         break;
                     case 3 :
-                        startActivity(new Intent(getApplicationContext(), StikkyHeaderActivity.class));
+                        startActivity(new Intent(mContext, StikkyHeaderActivity.class));
                         break;
                     case 4 :
-                        startActivity(new Intent(getApplicationContext(), ScrollViewActivity.class));
+                        startActivity(new Intent(mContext, ScrollViewActivity.class));
                         break;
                     case 5 :
-                        startActivity(new Intent(getApplicationContext(), RecyclerViewActivity.class));
+                        startActivity(new Intent(mContext, RecyclerViewActivity.class));
                         break;
                     default:
                         break;

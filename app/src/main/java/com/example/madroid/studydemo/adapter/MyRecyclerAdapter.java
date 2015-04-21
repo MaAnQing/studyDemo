@@ -1,12 +1,16 @@
 package com.example.madroid.studydemo.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.listener.RecyclerViewItemClickedListener;
+import com.example.madroid.studydemo.listener.RecyclerViewItemLongClickedListener;
 import com.example.madroid.studydemo.model.RecyclerItem;
+import com.example.madroid.studydemo.viewholder.MyViewHolder;
 
 import java.util.List;
 
@@ -14,9 +18,11 @@ import java.util.List;
 /**
  * Created by madroid on 15-4-15.
  */
-public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder> {
+public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     private List<RecyclerItem> mDataSet ;
+    private RecyclerViewItemClickedListener mListener ;
+    private RecyclerViewItemLongClickedListener mLongListener ;
 
     public MyRecyclerAdapter(List<RecyclerItem> data){
         if (data == null) {
@@ -40,21 +46,23 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View itemView = View.inflate(viewGroup.getContext(),R.layout.recycler_view_item,null) ;
         MyViewHolder holder = new MyViewHolder(itemView) ;
+        if (mListener != null && mLongListener != null){
+            holder = new MyViewHolder(itemView,mListener,mLongListener) ;
+            Log.i("madroid", "new holder   22") ;
+
+        }
         return holder;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public  TextView mTextView;
 
-        /**
-         * @Description: TODO
-         * @param itemView
-         */
-        public MyViewHolder(View itemView) {
-            super(itemView);
-            mTextView = (TextView) itemView.findViewById(R.id.recycler_title);
-        }
+    public void setOnItemClickedListener(RecyclerViewItemClickedListener listener){
+        mListener = listener ;
     }
+
+    public void setOnItemLongClickedListener(RecyclerViewItemLongClickedListener longClickedListener){
+        mLongListener = longClickedListener ;
+    }
+
 
 }
