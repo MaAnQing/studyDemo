@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.listener.RecyclerViewItemClickedListener;
@@ -48,20 +47,26 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
         MyViewHolder holder = new MyViewHolder(itemView) ;
         if (mListener != null && mLongListener != null){
             holder = new MyViewHolder(itemView,mListener,mLongListener) ;
-            Log.i("madroid", "new holder   22") ;
-
         }
         return holder;
     }
 
 
-
+    //设置监听器
     public void setOnItemClickedListener(RecyclerViewItemClickedListener listener){
         mListener = listener ;
     }
 
     public void setOnItemLongClickedListener(RecyclerViewItemLongClickedListener longClickedListener){
         mLongListener = longClickedListener ;
+    }
+
+    public void addItem(int position){
+        notifyItemRemoved(position);
+    }
+
+    public void removeitem(int position){
+        notifyItemInserted(position);
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.madroid.studydemo.viewholder;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -36,6 +37,7 @@ public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClic
 
     @Override
     public void onClick(View v) {
+        Log.i("madroid","view holder") ;
         if ( v != null){
             mListener.onItemClick(v ,getPosition());
         }
