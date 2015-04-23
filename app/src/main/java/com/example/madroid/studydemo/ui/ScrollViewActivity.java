@@ -1,13 +1,11 @@
 package com.example.madroid.studydemo.ui;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.example.madroid.studydemo.R;
 
-public class ScrollViewActivity extends ActionBarActivity {
+public class ScrollViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

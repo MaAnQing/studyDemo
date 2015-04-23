@@ -1,9 +1,7 @@
 package com.example.madroid.studydemo.ui;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 
 import com.example.madroid.studydemo.R;
 

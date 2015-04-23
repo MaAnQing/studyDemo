@@ -1,11 +1,9 @@
 package com.example.madroid.studydemo.adapter;
 
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.listener.RecyclerViewItemClickedListener;
 import com.example.madroid.studydemo.listener.RecyclerViewItemLongClickedListener;
 import com.example.madroid.studydemo.model.RecyclerItem;
@@ -22,12 +20,14 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
     private List<RecyclerItem> mDataSet ;
     private RecyclerViewItemClickedListener mListener ;
     private RecyclerViewItemLongClickedListener mLongListener ;
+    private int itemResId ;
 
-    public MyRecyclerAdapter(List<RecyclerItem> data){
+    public MyRecyclerAdapter(List<RecyclerItem> data ,int itemId){
         if (data == null) {
             throw new IllegalArgumentException("Recycler item must not be null");
         }
         mDataSet = data ;
+        itemResId = itemId ;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View itemView = View.inflate(viewGroup.getContext(),R.layout.recycler_view_item,null) ;
+        View itemView = View.inflate(viewGroup.getContext(),itemResId,null) ;
         MyViewHolder holder = new MyViewHolder(itemView) ;
         if (mListener != null && mLongListener != null){
             holder = new MyViewHolder(itemView,mListener,mLongListener) ;

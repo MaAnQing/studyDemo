@@ -1,23 +1,9 @@
 package com.example.madroid.studydemo.ui;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.support.v7.app.ActionBarActivity;
 
 import com.example.madroid.studydemo.R;
-
-import java.util.Random;
 
 public class SurfaceViewActivity extends ActionBarActivity {
 

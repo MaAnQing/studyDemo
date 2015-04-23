@@ -4,15 +4,12 @@ package com.example.madroid.studydemo.view.stikkyheader;
 import android.content.Context;
 import android.support.annotation.DimenRes;
 import android.support.annotation.IdRes;
-
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ScrollView;
-
-import java.io.StringWriter;
 
 
 public abstract class StikkyHeaderBuilder {
