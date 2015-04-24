@@ -4,13 +4,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.model.MoodItem;
 import com.example.madroid.studydemo.viewholder.MoodViewHolder;
-
-import org.w3c.dom.ls.LSException;
 
 import java.util.List;
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -93,6 +94,7 @@ public class MoodShowFragment extends Fragment implements MoodViewHolder.onItemC
         mAdapter.setItemClickedListener(this);
         mAdapter.SetItemLongClickedListener(this);
         mRecycler.setAdapter(mAdapter);
+        mRecycler.setItemAnimator(new DefaultItemAnimator());
 
 
         RecyclerView.LayoutManager manager = new LinearLayoutManager(mContext) ;
@@ -139,13 +141,18 @@ public class MoodShowFragment extends Fragment implements MoodViewHolder.onItemC
     //recycler item click
     @Override
     public void onClick(View view, int position) {
-        Toast.makeText(getActivity(),"position:" + position,Toast.LENGTH_SHORT).show();
-        Log.i("madroid","position: " + position) ;
+        //Toast.makeText(getActivity(),"position:" + position,Toast.LENGTH_SHORT).show();
+        Log.i("madroid", "position: " + position) ;
+        mDataSet.remove(position) ;
+        mAdapter.notifyItemRemoved(position);
+        //mAdapter.notifyItemChanged(position);
+        //mAdapter.notifyItemMoved(position,position + 2);
     }
 
     @Override
     public void onLongClick(View view, int position) {
-
+        Toast.makeText(getActivity(),"long position:" + position,Toast.LENGTH_SHORT).show();
+        Log.i("madroid", "long position: " + position) ;
     }
 
     /**
