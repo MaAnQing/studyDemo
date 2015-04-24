@@ -26,23 +26,13 @@ import com.example.madroid.studydemo.model.RecyclerItem;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link SampleRecyclerViewFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link SampleRecyclerViewFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class SampleRecyclerViewFragment extends Fragment implements RecyclerViewItemClickedListener,RecyclerViewItemLongClickedListener {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+
+    private static final String RECYCLER_LAYOUT_ITEM = "recycler_layout_item";
 
     // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private int mItemResId;
 
     private RecyclerView mRecyclerView;
     private MyRecyclerAdapter mAdapter ;
@@ -54,16 +44,14 @@ public class SampleRecyclerViewFragment extends Fragment implements RecyclerView
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param layoutId recycler view item id.
      * @return A new instance of fragment SampleRecyclerViewFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SampleRecyclerViewFragment newInstance(String param1, String param2) {
+    public static SampleRecyclerViewFragment newInstance(int layoutId) {
         SampleRecyclerViewFragment fragment = new SampleRecyclerViewFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putInt(RECYCLER_LAYOUT_ITEM, layoutId);
         fragment.setArguments(args);
         return fragment;
     }
@@ -76,15 +64,14 @@ public class SampleRecyclerViewFragment extends Fragment implements RecyclerView
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            mItemResId = getArguments().getInt(RECYCLER_LAYOUT_ITEM);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sample_recycler_view,container,false) ;
+        View view = inflater.inflate(R.layout.fragment_recycler_view,container,false) ;
         initView(view) ;
         return view;
     }
@@ -122,7 +109,7 @@ public class SampleRecyclerViewFragment extends Fragment implements RecyclerView
         //如果已知内容的变化不会改变RecyclerView的布局大小，使用这个来提高性能
         mRecyclerView.setHasFixedSize(true);
 
-        mAdapter = new MyRecyclerAdapter(getDadaSet(),R.layout.recycler_view_item) ;
+        mAdapter = new MyRecyclerAdapter(getDadaSet(),mItemResId) ;
         mAdapter.setOnItemClickedListener(this);
         mAdapter.setOnItemLongClickedListener(this);
         mRecyclerView.setAdapter(mAdapter);

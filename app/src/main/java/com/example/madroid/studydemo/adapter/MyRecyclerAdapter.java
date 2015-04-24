@@ -1,6 +1,7 @@
 package com.example.madroid.studydemo.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -43,7 +44,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View itemView = View.inflate(viewGroup.getContext(),itemResId,null) ;
+        //View itemView = View.inflate(viewGroup.getContext(),itemResId,viewGroup) ;
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(itemResId,viewGroup,false) ;
         MyViewHolder holder = new MyViewHolder(itemView) ;
         if (mListener != null && mLongListener != null){
             holder = new MyViewHolder(itemView,mListener,mLongListener) ;

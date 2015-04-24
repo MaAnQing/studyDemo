@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.listener.OnFragmentInteractionListener;
 
-public class RecyclerViewActivity extends BaseActivity implements OnFragmentInteractionListener {
+public class RecyclerViewActivity extends BaseActivity implements OnFragmentInteractionListener ,MoodShowFragment.OnFragmentInteractionListener{
 
     private Context mContext ;
 
@@ -19,7 +19,7 @@ public class RecyclerViewActivity extends BaseActivity implements OnFragmentInte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
         //initView() ;
-        loadFragment(R.id.container,new SampleRecyclerViewFragment());
+        loadFragment(R.id.container,SampleRecyclerViewFragment.newInstance(R.layout.recycler_view_item));
     }
 
     @Override
@@ -39,10 +39,13 @@ public class RecyclerViewActivity extends BaseActivity implements OnFragmentInte
         //noinspection SimplifiableIfStatement
         switch (id){
             case R.id.action_recycler :
-                loadFragment(R.id.container, new SampleRecyclerViewFragment());
+                loadFragment(R.id.container, SampleRecyclerViewFragment.newInstance(R.layout.recycler_view_item));
                 break;
             case R.id.action_card :
-               loadFragment(R.id.container,new RecyclerCardFragment());
+               loadFragment(R.id.container,RecyclerCardFragment.newInstance(R.layout.recycler_card_item));
+                return true ;
+            case R.id.action_mood :
+                loadFragment(R.id.container,new MoodShowFragment());
                 return true ;
             default:
                 break;

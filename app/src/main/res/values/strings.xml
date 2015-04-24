@@ -17,4 +17,5 @@
     <!--menu -->
     <string name="action_recycler">sample Recycler</string>
     <string name="action_card">card+recycler</string>
+    <string name="action_mood">mood recycler</string>
 </resources>
