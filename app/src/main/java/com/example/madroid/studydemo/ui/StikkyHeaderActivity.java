@@ -1,23 +1,14 @@
 package com.example.madroid.studydemo.ui;
 
 import android.app.Fragment;
-import android.content.Intent;
-import android.net.Uri;
-import android.nfc.Tag;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.madroid.studydemo.R;
 import com.example.madroid.studydemo.ui.tikkyheader.ActionBarImageFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.IO2014HeaderFragment;
+import com.example.madroid.studydemo.ui.tikkyheader.MyStikkyViewFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.ParallaxStikkyFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.RecyclerStikkyFragment;
 import com.example.madroid.studydemo.ui.tikkyheader.SimpleScrollViewFragment;
@@ -66,6 +57,9 @@ public class StikkyHeaderActivity extends ActionBarActivity implements StikkyHea
                 break;
             case 5 :
                 fragment = new SimpleScrollViewFragment() ;
+                break;
+            case 6 :
+                fragment = new MyStikkyViewFragment() ;
                 break;
             default:
                 break;

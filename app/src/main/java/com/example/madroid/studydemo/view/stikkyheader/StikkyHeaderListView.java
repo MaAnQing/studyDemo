@@ -52,11 +52,13 @@ public class StikkyHeaderListView extends StikkyHeader {
     private class StickyOnScrollListener implements AbsListView.OnScrollListener {
 
         private int mScrolledYList = 0;
+        private int mScrolledState ;
 
         @Override
         public void onScrollStateChanged(AbsListView view, int scrollState) {
             if (mDelegateOnScrollListener != null) {
                 mDelegateOnScrollListener.onScrollStateChanged(view, scrollState);
+                mScrolledState = scrollState   ;
             }
         }
 
@@ -66,7 +68,7 @@ public class StikkyHeaderListView extends StikkyHeader {
             mScrolledYList = -calculateScrollYList();
 
             //notify the animator
-            mHeaderAnimator.onScroll(mScrolledYList);
+            mHeaderAnimator.onScroll(mScrolledYList ,mScrolledState);
 
             if (mDelegateOnScrollListener != null) {
                 mDelegateOnScrollListener.onScroll(view, firstVisibleItem, visibleItemCount, totalItemCount);

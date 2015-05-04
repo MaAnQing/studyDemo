@@ -32,6 +32,18 @@
             android:name=".ui.StikkyHeaderActivity"
             android:label="@string/title_activity_stikky_header" >
         </activity>
+        <activity
+            android:name=".ui.ScrollViewActivity"
+            android:label="@string/title_activity_scroll_view" >
+        </activity>
+        <activity
+            android:name=".ui.RecyclerViewActivity"
+            android:label="@string/title_activity_recycler_view" >
+        </activity>
+        <activity
+            android:name=".ui.BaseActivity"
+            android:label="@string/title_activity_base" >
+        </activity>
     </application>
 
 </manifest>

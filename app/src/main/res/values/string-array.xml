@@ -5,6 +5,8 @@
         <item>ripple view</item>
         <item>surface view</item>
         <item>stikkyHeader</item>
+        <item>Scroll view</item>
+        <item>RecyclerView (ListView)</item>
     </string-array>
 
     <string-array name="stikky_header_title">

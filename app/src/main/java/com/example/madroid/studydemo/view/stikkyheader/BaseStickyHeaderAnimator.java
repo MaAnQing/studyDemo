@@ -1,6 +1,7 @@
 package com.example.madroid.studydemo.view.stikkyheader;
 
 
+import android.util.Log;
 
 public class BaseStickyHeaderAnimator extends HeaderAnimator {
 
@@ -17,8 +18,9 @@ public class BaseStickyHeaderAnimator extends HeaderAnimator {
     }
 
     @Override
-    public void onScroll(int scrolledY) {
+    public void onScroll(int scrolledY ,int scrollState) {
 
+        Log.i("StikkyHeader", " onScroll --->>  header scrolledY : " + scrolledY + "press : " + scrollState) ;
         getHeader().setTranslationY(Math.max(scrolledY, getMaxTranslation()));
 
         mTranslationRatio = calculateTranslationRatio(scrolledY);

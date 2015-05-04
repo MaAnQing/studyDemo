@@ -1,10 +1,8 @@
 package com.example.madroid.studydemo.ui;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,22 +87,7 @@ public class StikkyHeaderFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 onButtonPressed(position);
-//                switch (position){
-//                    case 0 :
-//                        startActivity(new Intent(getActivity(), RippleBackgroundActivity.class));
-//                        break;
-//                    case 1 :
-//                        startActivity(new Intent(getActivity(), rippleActivity.class));
-//                        break;
-//                    case 2 :
-//                        startActivity(new Intent(getActivity(), SurfaceViewActivity.class));
-//                        break;
-//                    case 3 :
-//                        startActivity(new Intent(getActivity(), StikkyHeaderActivity.class));
-//                        break;
-//                    default:
-//                        break;
-//                }
+
             }
         });
         mData = getResources().getStringArray(R.array.stikky_header_title) ;
@@ -112,12 +95,6 @@ public class StikkyHeaderFragment extends Fragment {
         mListView.setAdapter(mAdapter);
     }
 
-    private void loadFragment(Fragment fragment){
-        getFragmentManager().beginTransaction().
-                replace(R.id.layout_container, fragment, fragment.getClass().getName())
-                .addToBackStack(fragment.getClass().getName())
-                .commit();
-    }
 
     @Override
     public void onAttach(Activity activity) {
