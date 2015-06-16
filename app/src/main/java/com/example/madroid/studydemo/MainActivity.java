@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
 import com.example.madroid.studydemo.ui.ScrollViewActivity;
@@ -38,25 +39,27 @@ public class MainActivity extends ActionBarActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0 :
+                switch (position) {
+                    case 0:
                         startActivity(new Intent(mContext, RippleBackgroundActivity.class));
                         break;
-                    case 1 :
+                    case 1:
                         startActivity(new Intent(mContext, rippleActivity.class));
                         break;
-                    case 2 :
+                    case 2:
                         startActivity(new Intent(mContext, SurfaceViewActivity.class));
                         break;
-                    case 3 :
+                    case 3:
                         startActivity(new Intent(mContext, StikkyHeaderActivity.class));
                         break;
-                    case 4 :
+                    case 4:
                         startActivity(new Intent(mContext, ScrollViewActivity.class));
                         break;
-                    case 5 :
+                    case 5:
                         startActivity(new Intent(mContext, RecyclerViewActivity.class));
                         break;
+                    case 6:
+                        startActivity(WeatherActivity.class);
                     default:
                         break;
                 }
@@ -65,6 +68,12 @@ public class MainActivity extends ActionBarActivity {
         mData = getResources().getStringArray(R.array.main_title) ;
         mAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,mData) ;
         mListView.setAdapter(mAdapter);
+    }
+
+    private void startActivity(Class cla) {
+        startActivity(new Intent(mContext, cla));
+        Intent intent = new Intent() ;
+        Bundle bundle = new Bundle() ;
     }
 
 
