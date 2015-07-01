@@ -1,0 +1,12 @@
+{
+    "name":"madroid",
+    "age":25,
+    "address":"anhui bozhou",
+    "study" : {
+        "volley":true,
+        "gson" : true,
+        "json" : true,
+        "weixin":false,
+        "bluetooth" : true
+    }
+}

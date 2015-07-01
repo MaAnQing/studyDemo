@@ -8,6 +8,7 @@
         <item>Scroll view</item>
         <item>RecyclerView (ListView)</item>
         <item>MVP</item>
+        <item>Volley + Gson</item>
     </string-array>
 
     <string-array name="stikky_header_title">
@@ -18,5 +19,11 @@
         <item>Recycler View Header</item>
         <item>Scroll View Header</item>
         <item>My Stikky Header</item>
+    </string-array>
+
+    <string-array name="data_type">
+        <item>string</item>
+        <item>image</item>
+        <item>json</item>
     </string-array>
 </resources>

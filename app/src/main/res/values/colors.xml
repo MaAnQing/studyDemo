@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="rippelColor">#3c444f</color>
+    <color name="light_blue_100">#B3E5FC</color>
 </resources>

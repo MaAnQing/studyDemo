@@ -16,6 +16,7 @@ import com.example.madroid.studydemo.ui.ScrollViewActivity;
 import com.example.madroid.studydemo.ui.StikkyHeaderActivity;
 import com.example.madroid.studydemo.ui.SurfaceViewActivity;
 import com.example.madroid.studydemo.ui.rippleActivity;
+import com.example.madroid.studydemo.volleyGson.VolleyGsonActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -60,6 +61,10 @@ public class MainActivity extends ActionBarActivity {
                         break;
                     case 6:
                         startActivity(WeatherActivity.class);
+                        break;
+                    case 7 :
+                        startActivity(VolleyGsonActivity.class);
+                        break;
                     default:
                         break;
                 }
@@ -72,8 +77,6 @@ public class MainActivity extends ActionBarActivity {
 
     private void startActivity(Class cla) {
         startActivity(new Intent(mContext, cla));
-        Intent intent = new Intent() ;
-        Bundle bundle = new Bundle() ;
     }
 
 

@@ -2,15 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.madroid.studydemo" >
 
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".MasterApp"
         android:theme="@style/Theme.AppCompat.Light" >
-        
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -51,6 +50,11 @@
         <activity
             android:name=".mvp.view.WeatherActivity"
             android:label="@string/title_activity_weather" >
+        </activity>
+        <activity
+            android:theme="@style/ToolBarTheme"
+            android:name=".volleyGson.VolleyGsonActivity"
+            android:label="@string/title_activity_volley_gson" >
         </activity>
     </application>
 
