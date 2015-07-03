@@ -31,4 +31,5 @@
     <string name="json">Web Json</string>
     <string name="gson">Gson</string>
     <string name="local_json">Local Json</string>
+    <string name="title_activity_chart">ChartActivity</string>
 </resources>

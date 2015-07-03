@@ -19,14 +19,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.madroid.studydemo.Constant;
 import com.example.madroid.studydemo.Keeper;
 import com.example.madroid.studydemo.R;
@@ -192,7 +189,8 @@ public class VolleyGsonActivity extends AppCompatActivity implements View.OnClic
         int jsonType = Keeper.readJsonType() ;
         switch (jsonType) {
             case Constant.LOCAL_JSON :
-                getLocalJson();
+                //getLocalJson();
+                loadEcgJsonData() ;
                 break;
 
             case Constant.JSON:
@@ -221,8 +219,34 @@ public class VolleyGsonActivity extends AppCompatActivity implements View.OnClic
         }
         //将Json转换成java对象
         Userinfo info = new Gson().fromJson(json,Userinfo.class) ;
+        //将java对象转换成Json
+        String jsonStr = new Gson().toJson(info) ;
+        Log.i(TAG,"json str : " + jsonStr) ;
+
         mDisplayTxt.append(info.toString()+ "\n");
         Log.i(TAG, "madroid : " + info.getName() + "\n") ;
+    }
+
+    private void loadEcgJsonData() {
+        String json = "" ;
+        mDisplayTxt.append("/assets/ECG.json" + "\n");
+        try {
+            InputStream in = getResources().getAssets().open("ECG.json") ;
+            int len = in.available() ;
+            byte[] temp = new byte[len] ;
+            in.read(temp) ;
+            json = EncodingUtils.getString(temp,"UTF-8") ;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //将Json转换成java对象
+        EcgDataInfo info = new Gson().fromJson(json,EcgDataInfo.class) ;
+        //将java对象转换成Json
+        String jsonStr = new Gson().toJson(info) ;
+        Log.i(TAG,"ecg json str : " + jsonStr) ;
+
+        mDisplayTxt.append(info.toString()+ "\n");
+        //Log.i(TAG,"ecg time json str : " + info.getECGItem().getTime()) ;
     }
 
     private void showToast(String txt){
