@@ -9,6 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.madroid.studydemo.MPAndroidChart.ChartActivity;
+import com.example.madroid.studydemo.MPAndroidChart.ChartBaseActivity;
+import com.example.madroid.studydemo.MPAndroidChart.LineChartActivity;
 import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
@@ -65,6 +68,11 @@ public class MainActivity extends ActionBarActivity {
                     case 7 :
                         startActivity(VolleyGsonActivity.class);
                         break;
+
+                    case 8 :
+                        startActivity(ChartBaseActivity.class);
+                        break;
+
                     default:
                         break;
                 }

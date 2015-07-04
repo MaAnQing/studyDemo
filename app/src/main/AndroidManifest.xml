@@ -58,8 +58,22 @@
         </activity>
         <activity
             android:name=".MPAndroidChart.ChartActivity"
-            android:screenOrientation="landscape"
-            android:label="@string/title_activity_chart" >
+            android:label="@string/title_activity_chart"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".MPAndroidChart.LineChartActivity"
+            android:label="@string/title_activity_chart"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".MPAndroidChart.ChartBaseActivity"
+            android:label="@string/title_activity_chart_base" >
+        </activity>
+        <activity
+            android:name=".MPAndroidChart.EcgChartActivity"
+            android:label="@string/title_activity_ecg_chart"
+            android:screenOrientation="landscape">
         </activity>
     </application>
 

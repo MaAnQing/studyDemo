@@ -9,6 +9,7 @@
         <item>RecyclerView (ListView)</item>
         <item>MVP</item>
         <item>Volley + Gson</item>
+        <item>MPAndroidChart</item>
     </string-array>
 
     <string-array name="stikky_header_title">
