@@ -37,4 +37,7 @@
     <string name="double_line">double line Chart</string>
     <string name="ecg_line">ecg line chart</string>
     <string name="title_activity_ecg_chart">EcgChartActivity</string>
+    <string name="title_activity_ecg_custom">EcgCustomActivity</string>
+    <string name="ecg_custom">ecg custom</string>
+    <string name="change_color">change color</string>
 </resources>

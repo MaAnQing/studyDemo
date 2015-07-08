@@ -27,4 +27,15 @@
         </attr>
 
     </declare-styleable>
+
+    <declare-styleable name="EcgView">
+        <attr name="showGird" format="boolean" />
+        <attr name="girdColor" format="color" />
+        <attr name="girdWideLingColor" format="color" />
+        <attr name="girdHeight" format="dimension" />
+        <attr name="girdWidth" format="dimension" />
+        <attr name="girdLineWidth" format="integer"/>
+        <attr name="girdWideLineWidth" format="integer"/>
+    </declare-styleable>
+
 </resources>

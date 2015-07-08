@@ -29,6 +29,8 @@ public class EcgChartActivity extends AppCompatActivity {
 
     private static final String TAG = "EcgChartActivity" ;
     private LineChart mEcgChart ;
+    private LineDataSet set1 ;
+    private LineData mLineData ;
 
 
     @Override
@@ -43,7 +45,7 @@ public class EcgChartActivity extends AppCompatActivity {
         mEcgChart = (LineChart) findViewById(R.id.ecg_chart) ;
         mEcgChart.setOnChartGestureListener(mChartGestureListener);
         mEcgChart.setOnChartValueSelectedListener(mChartValueSelectedListener);
-        mEcgChart.setDrawGridBackground(false);
+        mEcgChart.setDrawGridBackground(true);
 
         mEcgChart.setDescription("description");
         mEcgChart.setNoDataTextDescription("no ecg data");
@@ -56,8 +58,14 @@ public class EcgChartActivity extends AppCompatActivity {
 
         mEcgChart.setScaleEnabled(true);
 
+        mEcgChart.setMaxVisibleValueCount(50);
+
+
         //mEcgChart.setPinchZoom(true);
 
+        //mEcgChart.setAlwaysDrawnWithCacheEnabled(true);
+
+        //mEcgChart.setSaveEnabled(true);
 
 
         //y轴
@@ -65,6 +73,8 @@ public class EcgChartActivity extends AppCompatActivity {
         leftAxis.setEnabled(true);
         leftAxis.setAxisMinValue(0);
         leftAxis.setAxisMaxValue(100);
+        //是否显示Y轴数字
+        leftAxis.setDrawLabels(false);
         leftAxis.setStartAtZero(false);
         leftAxis.setGridColor(Color.rgb(242, 103, 16));
 //        leftAxis.setAxisLineColor(Color.rgb(242, 103, 16));
@@ -76,11 +86,13 @@ public class EcgChartActivity extends AppCompatActivity {
 
         //x轴
         XAxis xAxis = mEcgChart.getXAxis();
+        xAxis.setDrawLabels(false);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setTextSize(10f);
         xAxis.setTextColor(Color.RED);
         xAxis.setSpaceBetweenLabels(1);
-        xAxis.setAvoidFirstLastClipping(true);
+        xAxis.setAvoidFirstLastClipping(false);
+
 
         //x轴线
         xAxis.setDrawAxisLine(true);
@@ -88,6 +100,10 @@ public class EcgChartActivity extends AppCompatActivity {
         xAxis.setDrawGridLines(true);
         xAxis.setGridColor(Color.rgb(242, 103, 16));
 
+        //set1
+        //set1
+
+        initEcgData(10);
 
         //testEmpt() ;
         new Thread(new Runnable() {
@@ -108,8 +124,12 @@ public class EcgChartActivity extends AppCompatActivity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    initEcgData(100) ;
-                    mHandler.sendEmptyMessage(0) ;
+//                    List<String> value = new ArrayList<String>() ;
+//                    value.add("" + 20 + i) ;
+//                    mEcgChart.getXAxis().setValues(value);
+//                    mEcgChart.setData(mLineData);
+//                    mHandler.sendEmptyMessage(0) ;
+                    Log.i(TAG,"add value") ;
                 }
 
             }
@@ -122,12 +142,11 @@ public class EcgChartActivity extends AppCompatActivity {
                 switch (msg.what) {
                     case 0 :
                         mEcgChart.invalidate();
+                        Log.i(TAG,mEcgChart.getLineData().getDataSets().get(0).getEntryCount() + "") ;
                         break;
                 }
             }
         };
-
-
 
 
     }
@@ -170,7 +189,7 @@ public class EcgChartActivity extends AppCompatActivity {
         }
 
         // create a dataset and give it a type
-        LineDataSet set1 = new LineDataSet(yVales,"25mm/s Lead off");
+        set1 = new LineDataSet(yVales,"25mm/s Lead off");
         // set1.setFillAlpha(110);
         // set1.setFillColor(Color.RED);
 
@@ -183,7 +202,7 @@ public class EcgChartActivity extends AppCompatActivity {
         set1.setCircleSize(3f);
         set1.setDrawCircleHole(true);
 
-
+        set1.setDrawValues(true);
 
         //曲线，折线
         set1.setDrawCubic(false);
@@ -203,10 +222,10 @@ public class EcgChartActivity extends AppCompatActivity {
         dataSets.add(set1); // add the datasets
 
         // create a data object with the datasets
-        LineData data = new LineData(xVals, dataSets);
+        mLineData = new LineData(xVals, dataSets);
 
         // set data
-        mEcgChart.setData(data);
+        mEcgChart.setData(mLineData);
 
     }
 

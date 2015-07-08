@@ -37,6 +37,10 @@ public class ChartBaseActivity extends AppCompatActivity {
                 startActivity(EcgChartActivity.class);
                 break;
 
+            case R.id.ecg_custom :
+                startActivity(EcgCustomActivity.class);
+                break;
+
         }
     }
 

@@ -34,5 +34,14 @@
         android:onClick="onClick"
         style="?android:attr/buttonBarButtonStyle"/>
 
+    <Button
+        android:id="@+id/ecg_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ecg_custom"
+        android:layout_marginTop="10dp"
+        android:onClick="onClick"
+        style="?android:attr/buttonBarButtonStyle"/>
+
 
 </LinearLayout>
