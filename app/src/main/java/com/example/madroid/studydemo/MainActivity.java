@@ -1,6 +1,7 @@
 package com.example.madroid.studydemo;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -12,6 +13,7 @@ import android.widget.ListView;
 import com.example.madroid.studydemo.MPAndroidChart.ChartActivity;
 import com.example.madroid.studydemo.MPAndroidChart.ChartBaseActivity;
 import com.example.madroid.studydemo.MPAndroidChart.LineChartActivity;
+import com.example.madroid.studydemo.materialDesign.MaterialActivity;
 import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
@@ -22,7 +24,7 @@ import com.example.madroid.studydemo.ui.rippleActivity;
 import com.example.madroid.studydemo.volleyGson.VolleyGsonActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
     private ListView mListView ;
     private ArrayAdapter<String> mAdapter ;
@@ -73,6 +75,10 @@ public class MainActivity extends ActionBarActivity {
                         startActivity(ChartBaseActivity.class);
                         break;
 
+                    case 9 :
+                        startActivity(MaterialActivity.class);
+                        break;
+
                     default:
                         break;
                 }
@@ -81,6 +87,8 @@ public class MainActivity extends ActionBarActivity {
         mData = getResources().getStringArray(R.array.main_title) ;
         mAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,mData) ;
         mListView.setAdapter(mAdapter);
+
+        findViewById(R.id.fab_btn).setOnClickListener(this);
     }
 
     private void startActivity(Class cla) {
@@ -88,4 +96,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+            case R.id.fab_btn:
+                startActivity(MaterialActivity.class);
+                break;
+        }
+    }
 }

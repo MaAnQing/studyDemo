@@ -78,7 +78,12 @@
         <activity
             android:name=".MPAndroidChart.EcgCustomActivity"
             android:label="@string/title_activity_ecg_custom"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".materialDesign.MaterialActivity"
+            android:label="@string/title_activity_material"
+            android:theme="@style/MyTheme">
         </activity>
     </application>
 

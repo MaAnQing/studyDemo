@@ -40,4 +40,6 @@
     <string name="title_activity_ecg_custom">EcgCustomActivity</string>
     <string name="ecg_custom">ecg custom</string>
     <string name="change_color">change color</string>
+    <string name="title_activity_material">MaterialActivity</string>
+    <string name="drawer_txt">drawer</string>
 </resources>

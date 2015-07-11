@@ -34,7 +34,7 @@ public class SampleRecyclerViewFragment extends Fragment implements RecyclerView
     // TODO: Rename and change types of parameters
     private int mItemResId;
 
-    private RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView ;
     private MyRecyclerAdapter mAdapter ;
     private List<RecyclerItem> dataSet ;
 
