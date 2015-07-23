@@ -18,11 +18,6 @@ import com.example.madroid.studydemo.R;
 
 public class MaterialActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CoordinatorLayout rootView ;
-    private static final String TAG = "MaterialActivity" ;
-    private FloatingActionButton mFabBtn ;
-    private Toolbar toolBar ;
-
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
 
@@ -32,28 +27,16 @@ public class MaterialActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_material);
 
         initInstances();
-        //initView() ;
     }
 
     private void initInstances() {
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         drawerToggle = new ActionBarDrawerToggle(MaterialActivity.this, drawerLayout, R.string.hello_world, R.string.hello_world);
         drawerLayout.setDrawerListener(drawerToggle);
 
 //        getSupportActionBar().setHomeButtonEnabled(true);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-//    private void initView() {
-//
-//        mFabBtn = (FloatingActionButton) findViewById(R.id.fabbtn) ;
-//        mFabBtn.setOnClickListener(this);
-//        rootView = (CoordinatorLayout) findViewById(R.id.root_layout) ;
-//
-//        toolBar = (Toolbar) findViewById(R.id.toolbar) ;
-//        setSupportActionBar(toolBar);
-//    }
-
 
     @Override
     public void onPostCreate(Bundle savedInstanceState) {
@@ -70,12 +53,15 @@ public class MaterialActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_material, menu);
+        getMenuInflater().inflate(R.menu.menu_code_lab, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (drawerToggle.onOptionsItemSelected(item))
+            return true;
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -91,18 +77,6 @@ public class MaterialActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
 
-//            case R.id.fabbtn:
-//                Snackbar.make(rootView,"hello, I am SnackBar",Snackbar.LENGTH_LONG)
-//                        .setAction("Undo", new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                Toast.makeText(getApplicationContext(),"sanckbar",Toast.LENGTH_SHORT).show();
-//                            }
-//                        }).show();
-//                //Toast.makeText(getApplicationContext(),"fab button",Toast.LENGTH_SHORT).show();
-//                break;
-        }
     }
 }

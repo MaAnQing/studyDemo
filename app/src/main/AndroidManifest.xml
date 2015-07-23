@@ -83,7 +83,7 @@
         <activity
             android:name=".materialDesign.MaterialActivity"
             android:label="@string/title_activity_material"
-            android:theme="@style/MyTheme">
+            android:theme="@style/AppTheme.WithoutActionBar">
         </activity>
     </application>
 
