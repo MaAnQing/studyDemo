@@ -83,7 +83,11 @@
         <activity
             android:name=".materialDesign.MaterialActivity"
             android:label="@string/title_activity_material"
-            android:theme="@style/AppTheme.WithoutActionBar">
+            android:theme="@style/AppTheme.WithoutActionBar" >
+        </activity>
+        <activity
+            android:name=".ebook.PhotoViewActivity"
+            android:label="@string/title_activity_photo_view" >
         </activity>
     </application>
 

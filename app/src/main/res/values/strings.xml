@@ -42,4 +42,8 @@
     <string name="change_color">change color</string>
     <string name="title_activity_material">MaterialActivity</string>
     <string name="drawer_txt">drawer</string>
+    <string name="title_activity_photo_view">PhotoViewActivity</string>
+    <string name="action_photo_view">PhotoView</string>
+    <string name="action_gif_view">gif view</string>
+    <string name="action_video_view">video view</string>
 </resources>

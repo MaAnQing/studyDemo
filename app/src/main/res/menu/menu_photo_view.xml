@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.madroid.studydemo.ebook.PhotoViewActivity">
+
+    <item android:id="@+id/action_photo_view"
+        android:title="@string/action_photo_view"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_gif_view"
+        android:title="@string/action_gif_view"
+        android:orderInCategory="101"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_video_view"
+        android:title="@string/action_video_view"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
+</menu>
