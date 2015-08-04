@@ -18,7 +18,6 @@ import android.widget.VideoView;
 import com.example.madroid.studydemo.R;
 
 import java.io.File;
-import java.io.FileReader;
 
 import pl.droidsonroids.gif.GifImageView;
 import uk.co.senab.photoview.PhotoViewAttacher;

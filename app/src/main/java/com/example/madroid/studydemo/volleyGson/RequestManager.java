@@ -10,7 +10,6 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
 /**
- * @FileName: com.example.madroid.studydemo.volleyGson.RequestManager.java
  * @author: madroid
  * @date: 2015-06-16 17:31
  */
