@@ -13,5 +13,14 @@
         android:text="@string/material_normal"
         android:onClick="onClick"/>
 
+    <Button
+        android:id="@+id/btn_pro"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/material_pro"
+        android:onClick="onClick"/>
+
 
 </LinearLayout>

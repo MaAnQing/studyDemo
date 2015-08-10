@@ -24,6 +24,10 @@ public class MaterialActivity extends AppCompatActivity {
                 intent.setClass(this,NormalActivity.class) ;
                 break;
 
+            case R.id.btn_pro :
+                intent.setClass(this,ProActivity.class) ;
+                break;
+
             default:
                 break;
         }
