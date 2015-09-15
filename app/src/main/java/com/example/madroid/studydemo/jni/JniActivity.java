@@ -4,15 +4,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.madroid.studydemo.R;
+import com.hm.madroid.ecg.EcgFilter;
+
 
 public class JniActivity extends AppCompatActivity {
+
+
+    TextView textView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jni);
+
+        textView = (TextView) findViewById(R.id.text_jni) ;
+
+        EcgFilter ecgFilter = new EcgFilter() ;
+        textView.setText(ecgFilter.processEcg(10) + "");
+        //textView.setText(ecgNative.getString());
     }
 
     @Override

@@ -46,11 +46,14 @@
     <string name="action_photo_view">PhotoView</string>
     <string name="action_gif_view">gif view</string>
     <string name="action_video_view">video view</string>
-    <string name="material_normal">normal</string>
+    <string name="material_normal">material normal</string>
     <string name="title_activity_normal">NormalActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
+    <string name="material_pro">material pro</string>
+    <string name="action_enable_tab">enable tab</string>
+    <string name="title_activity_jni">JniActivity</string>
 </resources>

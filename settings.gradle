@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':ecg'
+project(':app').projectDir = new File('app')
+project(':ecg').projectDir = new File('ecg')

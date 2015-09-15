@@ -14,6 +14,7 @@ import com.example.madroid.studydemo.MPAndroidChart.ChartActivity;
 import com.example.madroid.studydemo.MPAndroidChart.ChartBaseActivity;
 import com.example.madroid.studydemo.MPAndroidChart.LineChartActivity;
 import com.example.madroid.studydemo.ebook.PhotoViewActivity;
+import com.example.madroid.studydemo.jni.JniActivity;
 import com.example.madroid.studydemo.materialDesign.MaterialActivity;
 import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
@@ -84,6 +85,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         startActivity(PhotoViewActivity.class);
                         break;
 
+                    case 11 :
+                        startActivity(JniActivity.class);
+                        break;
+
                     default:
                         break;
                 }
@@ -107,7 +112,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.fab_btn:
-                startActivity(PhotoViewActivity.class);
+                startActivity(JniActivity.class);
                 break;
         }
     }

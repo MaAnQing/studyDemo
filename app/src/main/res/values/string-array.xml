@@ -12,6 +12,7 @@
         <item>MPAndroidChart</item>
         <item>Material Design</item>
         <item>book</item>
+        <item>NDK</item>
     </string-array>
 
     <string-array name="stikky_header_title">
