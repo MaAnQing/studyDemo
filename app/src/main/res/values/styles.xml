@@ -35,5 +35,7 @@
         <item name="colorPrimaryDark">#1565C0</item>
         <item name="colorAccent">#E91E63</item>
     </style>
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

@@ -56,4 +56,5 @@
     <string name="material_pro">material pro</string>
     <string name="action_enable_tab">enable tab</string>
     <string name="title_activity_jni">JniActivity</string>
+    <string name="title_activity_ok_http">OkHttpActivity</string>
 </resources>
