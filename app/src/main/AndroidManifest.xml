@@ -106,7 +106,7 @@
         <activity
             android:name=".okhttp.OkHttpActivity"
             android:label="@string/title_activity_ok_http"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            android:theme="@style/MyMaterial.WithoutActionBar" >
         </activity>
     </application>
 
