@@ -18,6 +18,7 @@ import com.example.madroid.studydemo.jni.JniActivity;
 import com.example.madroid.studydemo.materialDesign.MaterialActivity;
 import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.okhttp.OkHttpActivity;
+import com.example.madroid.studydemo.ui.CustomViewActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
 import com.example.madroid.studydemo.ui.ScrollViewActivity;
@@ -94,6 +95,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         startActivity(OkHttpActivity.class);
                         break;
 
+                    case 13 :
+                        startActivity(CustomViewActivity.class);
+                        break;
+
                     default:
                         break;
                 }
@@ -117,7 +122,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
 
             case R.id.fab_btn:
-                startActivity(JniActivity.class);
+                startActivity(CustomViewActivity.class);
                 break;
         }
     }

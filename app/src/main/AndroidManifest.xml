@@ -108,6 +108,11 @@
             android:label="@string/title_activity_ok_http"
             android:theme="@style/MyMaterial.WithoutActionBar" >
         </activity>
+        <activity
+            android:name=".ui.CustomViewActivity"
+            android:label="@string/title_activity_custom_view"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

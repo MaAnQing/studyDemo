@@ -3,25 +3,25 @@
     <declare-styleable name="RippleBackground">
         <attr name="rb_enable" format="boolean" />
         <attr name="rb_color" format="color" />
-        <attr name="rb_strokeWidth" format="dimension"/>
-        <attr name="rb_radius" format="dimension"/>
-        <attr name="rb_duration" format="integer"/>
-        <attr name="rb_rippleAmount" format="integer"/>
-        <attr name="rb_scale" format="float"/>
+        <attr name="rb_strokeWidth" format="dimension" />
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_duration" format="integer" />
+        <attr name="rb_rippleAmount" format="integer" />
+        <attr name="rb_scale" format="float" />
         <attr name="rb_type" format="enum">
-            <enum name="fillRipple" value="0"/>
-            <enum name="strokeRipple" value="1"/>
+            <enum name="fillRipple" value="0" />
+            <enum name="strokeRipple" value="1" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="RippleView">
-        <attr name="enable" format="boolean"/>
+        <attr name="enable" format="boolean" />
         <attr name="rippleNumber" format="integer" />
         <attr name="duration" format="integer" />
         <attr name="ripple_scale_from" format="float" />
         <attr name="ripple_scale_to" format="float" />
         <attr name="ripple_color" format="color" />
-        <attr name="ripple_type" format="enum" >
+        <attr name="ripple_type" format="enum">
             <enum name="fillRipple" value="1" />
             <enum name="strokeRipple" value="0" />
         </attr>
@@ -34,8 +34,14 @@
         <attr name="girdWideLingColor" format="color" />
         <attr name="girdHeight" format="dimension" />
         <attr name="girdWidth" format="dimension" />
-        <attr name="girdLineWidth" format="integer"/>
-        <attr name="girdWideLineWidth" format="integer"/>
+        <attr name="girdLineWidth" format="integer" />
+        <attr name="girdWideLineWidth" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="slideSwitch">
+        <attr name="disableDrawable" format="reference" />
+        <attr name="enableDrawable" format="reference" />
+        <attr name="thumb" format="reference" />
     </declare-styleable>
 
 </resources>
