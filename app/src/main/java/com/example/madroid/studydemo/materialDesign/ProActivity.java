@@ -20,7 +20,8 @@ import android.widget.Toast;
 import com.example.madroid.studydemo.R;
 import com.google.gson.internal.bind.MapTypeAdapterFactory;
 
-public class ProActivity extends AppCompatActivity {
+
+public class ProActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private static final String TAG = "ProActivity" ;
@@ -35,6 +36,7 @@ public class ProActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_material_pro);
+
         init();
     }
 
@@ -71,6 +73,8 @@ public class ProActivity extends AppCompatActivity {
         });
 
         enableTab(true);
+
+        findViewById(R.id.status_bar).setOnClickListener(this);
     }
 
     private void enableTab(boolean enable) {
@@ -79,39 +83,7 @@ public class ProActivity extends AppCompatActivity {
             mTabLayout.addTab(mTabLayout.newTab().setText("TAB1"));
             mTabLayout.addTab(mTabLayout.newTab().setText("TAB2"));
             mTabLayout.addTab(mTabLayout.newTab().setText("TAB3"));
-//            mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//                @Override
-//                public void onTabSelected(TabLayout.Tab tab) {
-//                    if ("TAB1".equals(tab.getTag())) {
-//                        //showMoreTab(false);
-//                        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-//                        mTabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
-//                        mTabLayout.invalidate();
-//                    } else if ("TAB2".equals(tab.getText())) {
-//                        //showMoreTab(false);
-//                        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-//                        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-//                        mTabLayout.invalidate();
-//                    } else if ("TAB3".equals(tab.getText())) {
-//                        //showMoreTab(true);
-//                        mTabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
-//                        mTabLayout.invalidate();
-//
-//                    }
-//                    Log.i(TAG,"tab :" + tab.getText()) ;
-//                }
-//
-//                @Override
-//                public void onTabUnselected(TabLayout.Tab tab) {
-//
-//                }
-//
-//                @Override
-//                public void onTabReselected(TabLayout.Tab tab) {
-//
-//                }
-//            });
-            //mTabLayout.setupWithViewPager();
+
         } else {
             mTabLayout.setVisibility(View.GONE);
         }
@@ -170,4 +142,17 @@ public class ProActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.status_bar:
+                StatusBarCompat.compat(this, getResources().getColor(R.color.colorPrimaryDark));
+                break;
+
+            default:
+                break;
+        }
+    }
+
 }
