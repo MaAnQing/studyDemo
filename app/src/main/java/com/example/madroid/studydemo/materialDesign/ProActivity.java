@@ -72,7 +72,7 @@ public class ProActivity extends AppCompatActivity implements View.OnClickListen
             }
         });
 
-        enableTab(true);
+        enableTab(false);
 
         findViewById(R.id.status_bar).setOnClickListener(this);
     }
