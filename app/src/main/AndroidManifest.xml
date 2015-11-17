@@ -80,6 +80,11 @@
             android:name=".materialDesign.MaterialActivity"
             android:label="@string/title_activity_material"
             android:theme="@style/MyMaterial" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ebook.PhotoViewActivity"
@@ -95,11 +100,7 @@
             android:label="@string/title_activity_normal"
             android:theme="@style/MyMaterial.WithoutActionBar" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".jni.JniActivity"

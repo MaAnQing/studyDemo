@@ -29,7 +29,6 @@ import com.example.madroid.studydemo.Keeper;
 import com.example.madroid.studydemo.R;
 import com.google.gson.Gson;
 
-import org.apache.http.util.EncodingUtils;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -213,7 +212,7 @@ public class VolleyGsonActivity extends AppCompatActivity implements View.OnClic
             int len = in.available() ;
             byte[] temp = new byte[len] ;
             in.read(temp) ;
-            json = EncodingUtils.getString(temp,"UTF-8") ;
+            //json = EncodingUtils.getString(temp,"UTF-8") ;
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -235,7 +234,7 @@ public class VolleyGsonActivity extends AppCompatActivity implements View.OnClic
             int len = in.available() ;
             byte[] temp = new byte[len] ;
             in.read(temp) ;
-            json = EncodingUtils.getString(temp,"UTF-8") ;
+            //json = EncodingUtils.getString(temp,"UTF-8") ;
         } catch (IOException e) {
             e.printStackTrace();
         }
