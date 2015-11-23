@@ -29,7 +29,18 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="@string/material_dialog"
-        android:onClick="onShowDialog"/>
+        android:onClick="onShowDialog"
+        />
+
+    <Button
+        android:id="@+id/dialog_pop_window"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/pop_window"
+        android:onClick="onShowPopWindow"
+        />
 
 
 </LinearLayout>

@@ -55,6 +55,7 @@
     <string name="action_example">Example action</string>
     <string name="material_pro">material pro</string>
     <string name="material_dialog">material dialog</string>
+    <string name="pop_window">pop window</string>
     <string name="show_dialog">show dialog</string>
     <string name="action_enable_tab">enable tab</string>
     <string name="title_activity_jni">JniActivity</string>
