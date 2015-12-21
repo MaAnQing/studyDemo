@@ -15,6 +15,7 @@
         <item>NDK</item>
         <item>OkHttp</item>
         <item>Custom View</item>
+        <item>Recycler view demo</item>
     </string-array>
 
     <string-array name="stikky_header_title">

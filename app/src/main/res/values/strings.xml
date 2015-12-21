@@ -8,7 +8,7 @@
     <string name="title_activity_surface_view">SurfaceViewActivity</string>
     <string name="title_activity_stikky_header">StikkyHeaderActivity</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_scroll_view">ScrollViewActivity</string>
     <string name="title_activity_recycler_view">RecyclerViewActivity</string>
@@ -61,4 +61,5 @@
     <string name="title_activity_jni">JniActivity</string>
     <string name="title_activity_ok_http">OkHttpActivity</string>
     <string name="title_activity_custom_view">CustomViewActivity</string>
+    <string name="title_activity_recycler_demoe">RecyclerDemoeActivity</string>
 </resources>

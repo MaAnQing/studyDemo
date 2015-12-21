@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".recyclerView.RecyclerDemoActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:background="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:layout_gravity="top"
+        android:visibility="gone"
+        android:text="ITEM"/>
+
+    <View
+        android:id="@+id/view"
+        android:background="@android:color/holo_orange_light"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|center_horizontal"
+        />
+
+</FrameLayout>
