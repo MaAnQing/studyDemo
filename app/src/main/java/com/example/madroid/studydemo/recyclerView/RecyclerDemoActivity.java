@@ -30,7 +30,7 @@ public class RecyclerDemoActivity extends AppCompatActivity {
     private void setupView() {
         mRecycler = (RecyclerView) findViewById(R.id.recycler);
         mRecycler.setHasFixedSize(true);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        mRecycler.setLayoutManager(new MyLayoutManager());
         mRecycler.setAdapter(new MyAdapter());
 
         mButton = (Button) findViewById(R.id.scroll_button);
@@ -76,11 +76,6 @@ public class RecyclerDemoActivity extends AppCompatActivity {
         public void setText(CharSequence text) {
             mText.setText(text);
         }
-
-        public void setHeight(int px) {
-            view.getLayoutParams().height = px ;
-            view.requestLayout();
-        }
     }
 
     class MyAdapter extends RecyclerView.Adapter<Holder> {
@@ -95,7 +90,6 @@ public class RecyclerDemoActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(Holder holder, int position) {
             holder.setText(mList.get(position));
-            holder.setHeight(position * 20);
         }
 
         @Override
