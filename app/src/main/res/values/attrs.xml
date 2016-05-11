@@ -28,6 +28,10 @@
 
     </declare-styleable>
 
+    <declare-styleable name="ColorView">
+        <attr name="myColor" format="reference"/>
+    </declare-styleable>
+
     <declare-styleable name="EcgView">
         <attr name="showGird" format="boolean" />
         <attr name="girdColor" format="color" />

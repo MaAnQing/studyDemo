@@ -21,5 +21,10 @@
         android:layout_gravity="center_horizontal"
         />
 
+    <com.example.madroid.studydemo.view.ColorView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"/>
+
 
 </LinearLayout>
