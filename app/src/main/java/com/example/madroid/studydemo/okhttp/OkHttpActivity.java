@@ -12,14 +12,16 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.madroid.studydemo.R;
-import com.squareup.okhttp.Call;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import java.io.IOException;
 import java.io.InputStream;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class OkHttpActivity extends AppCompatActivity {
 
@@ -75,6 +77,7 @@ public class OkHttpActivity extends AppCompatActivity {
     private void httpGet() {
         //创建okHttpClient对象
         OkHttpClient mOkHttpClient = new OkHttpClient();
+        mOkHttpClient.networkInterceptors().add(new StethoInterceptor()) ;
         //创建一个Request
         final Request request = new Request.Builder()
                 .url("https://github.com/hongyangAndroid")
@@ -85,12 +88,13 @@ public class OkHttpActivity extends AppCompatActivity {
         call.enqueue(new Callback()
         {
             @Override
-            public void onFailure(Request request, IOException e) {
+            public void onFailure(Call call, IOException e) {
                 Log.i(TAG,"onFailure") ;
+
             }
 
             @Override
-            public void onResponse(final Response response) throws IOException {
+            public void onResponse(Call call, Response response) throws IOException {
                 String htmlStr =  response.body().string();
                 //byte[] htmlStr =  response.body().bytes() ;
                 //InputStream htmlStr =  response.body().byteStream() ;
@@ -100,6 +104,7 @@ public class OkHttpActivity extends AppCompatActivity {
                 msg.obj = htmlStr ;
                 mHandler.sendMessage(msg) ;
             }
+
         });
     }
     

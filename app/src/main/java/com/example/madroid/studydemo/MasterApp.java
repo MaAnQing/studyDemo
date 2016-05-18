@@ -2,6 +2,8 @@ package com.example.madroid.studydemo;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
+
 /**
  * @FileName: com.example.madroid.studydemo.MasterApp.java
  * @author: madroid
@@ -14,7 +16,7 @@ public class MasterApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        Stetho.initializeWithDefaults(this);
         Keeper.init(this) ;
     }
 }

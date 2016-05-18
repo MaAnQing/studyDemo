@@ -19,6 +19,9 @@ public class Keeper {
     public static void init(Context context){
         Log.i(TAG,"init") ;
         mSharedPreferences = context.getSharedPreferences(KEEPER_NAME, Context.MODE_PRIVATE) ;
+        SharedPreferences.Editor editor = mSharedPreferences.edit() ;
+        editor.putBoolean("init",true) ;
+        editor.apply();
     }
 
     public static void keepJsonType(int type){
