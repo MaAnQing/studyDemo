@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.os.Debug;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -39,6 +40,13 @@ public class ColorView extends View {
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(mColor);
         invalidate();
+
+        int count = attrs.getAttributeCount() ;
+        for (int i = 0; i < count; i++) {
+            String name = attrs.getAttributeName(i) ;
+            String value = attrs.getAttributeValue(i) ;
+            Log.i(TAG,  name + " : " + value);
+        }
 
     }
 

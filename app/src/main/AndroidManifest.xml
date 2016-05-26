@@ -21,81 +21,80 @@
         </activity>
         <activity
             android:name=".ui.RippleBackgroundActivity"
-            android:label="@string/title_activity_ripple_background"></activity>
+            android:label="@string/title_activity_ripple_background" />
         <activity
             android:name=".ui.rippleActivity"
-            android:label="@string/title_activity_ripple"></activity>
+            android:label="@string/title_activity_ripple" />
         <activity
             android:name=".ui.SurfaceViewActivity"
-            android:label="@string/title_activity_surface_view"></activity>
+            android:label="@string/title_activity_surface_view" />
         <activity
             android:name=".ui.StikkyHeaderActivity"
-            android:label="@string/title_activity_stikky_header"></activity>
+            android:label="@string/title_activity_stikky_header" />
         <activity
             android:name=".ui.ScrollViewActivity"
-            android:label="@string/title_activity_scroll_view"></activity>
+            android:label="@string/title_activity_scroll_view" />
         <activity
             android:name=".ui.RecyclerViewActivity"
-            android:label="@string/title_activity_recycler_view"></activity>
+            android:label="@string/title_activity_recycler_view" />
         <activity
             android:name=".ui.BaseActivity"
-            android:label="@string/title_activity_base"></activity>
+            android:label="@string/title_activity_base" />
         <activity
             android:name=".mvp.view.WeatherActivity"
-            android:label="@string/title_activity_weather"></activity>
+            android:label="@string/title_activity_weather" />
         <activity
             android:name=".volleyGson.VolleyGsonActivity"
             android:label="@string/title_activity_volley_gson"
-            android:theme="@style/ToolBarTheme"></activity>
+            android:theme="@style/ToolBarTheme" />
         <activity
             android:name=".MPAndroidChart.ChartActivity"
             android:label="@string/title_activity_chart"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MPAndroidChart.LineChartActivity"
             android:label="@string/title_activity_chart"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MPAndroidChart.ChartBaseActivity"
-            android:label="@string/title_activity_chart_base"></activity>
+            android:label="@string/title_activity_chart_base" />
         <activity
             android:name=".MPAndroidChart.EcgChartActivity"
             android:label="@string/title_activity_ecg_chart"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MPAndroidChart.EcgCustomActivity"
             android:label="@string/title_activity_ecg_custom"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".materialDesign.MaterialActivity"
             android:label="@string/title_activity_material"
-            android:theme="@style/MyMaterial"></activity>
+            android:theme="@style/MyMaterial" />
         <activity
             android:name=".ebook.PhotoViewActivity"
-            android:label="@string/title_activity_photo_view"></activity>
+            android:label="@string/title_activity_photo_view" />
         <activity
             android:name=".materialDesign.NormalActivity"
             android:label="@string/title_activity_normal"
-            android:theme="@style/MyMaterial"></activity>
+            android:theme="@style/MyMaterial" />
         <activity
             android:name=".materialDesign.ProActivity"
             android:label="@string/title_activity_normal"
-            android:theme="@style/MyMaterial.WithoutActionBar"></activity>
+            android:theme="@style/MyMaterial.WithoutActionBar" />
         <activity
             android:name=".jni.JniActivity"
-            android:label="@string/title_activity_jni"></activity>
+            android:label="@string/title_activity_jni" />
         <activity
             android:name=".okhttp.OkHttpActivity"
             android:label="@string/title_activity_ok_http"
-            android:theme="@style/MyMaterial.WithoutActionBar"></activity>
+            android:theme="@style/MyMaterial.WithoutActionBar" />
         <activity
             android:name=".ui.CustomViewActivity"
             android:label="@string/title_activity_custom_view"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".recyclerView.RecyclerDemoActivity"
-            android:label="@string/title_activity_recycler_demoe"
-            />
+            android:label="@string/title_activity_recycler_demoe" />
     </application>
 
 </manifest>
