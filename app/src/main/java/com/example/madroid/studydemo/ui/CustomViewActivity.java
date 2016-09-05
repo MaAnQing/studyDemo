@@ -3,11 +3,15 @@ package com.example.madroid.studydemo.ui;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.madroid.studydemo.R;
+import com.example.madroid.studydemo.particle.ParticleSystem;
+
+import static com.example.madroid.studydemo.particle.ParticleSystem.*;
 
 public class CustomViewActivity extends AppCompatActivity {
 
@@ -26,6 +30,8 @@ public class CustomViewActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        new ParticleSystem.Builder(findViewById(R.id.colorView)).create().startAnim();
     }
 
 }
