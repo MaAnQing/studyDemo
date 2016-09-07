@@ -19,6 +19,7 @@ import com.example.madroid.studydemo.materialDesign.MaterialActivity;
 import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.okhttp.OkHttpActivity;
 import com.example.madroid.studydemo.recyclerView.RecyclerDemoActivity;
+import com.example.madroid.studydemo.rxjava.RxJavaActivity;
 import com.example.madroid.studydemo.ui.CustomViewActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
@@ -102,6 +103,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
                     case 14 :
                         startActivity(RecyclerDemoActivity.class);
+                        break;
+
+                    case 15:
+                        startActivity(RxJavaActivity.class);
                         break;
 
                     default:

@@ -95,6 +95,7 @@
         <activity
             android:name=".recyclerView.RecyclerDemoActivity"
             android:label="@string/title_activity_recycler_demoe" />
+        <activity android:name=".rxjava.RxJavaActivity"></activity>
     </application>
 
 </manifest>
