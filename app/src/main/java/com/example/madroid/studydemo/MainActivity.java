@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,6 +21,7 @@ import com.example.madroid.studydemo.mvp.view.WeatherActivity;
 import com.example.madroid.studydemo.okhttp.OkHttpActivity;
 import com.example.madroid.studydemo.recyclerView.RecyclerDemoActivity;
 import com.example.madroid.studydemo.rxjava.RxJavaActivity;
+import com.example.madroid.studydemo.ui.BottomSheetActivity;
 import com.example.madroid.studydemo.ui.CustomViewActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
@@ -30,7 +32,7 @@ import com.example.madroid.studydemo.ui.rippleActivity;
 import com.example.madroid.studydemo.volleyGson.VolleyGsonActivity;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ListView mListView ;
     private ArrayAdapter<String> mAdapter ;
@@ -109,6 +111,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                         startActivity(RxJavaActivity.class);
                         break;
 
+                    case 16:
+                        startActivity(BottomSheetActivity.class);
+                        break;
+
                     default:
                         break;
                 }
@@ -118,7 +124,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         mAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,mData) ;
         mListView.setAdapter(mAdapter);
 
-        findViewById(R.id.fab_btn).setOnClickListener(this);
+        //findViewById(R.id.fab_btn).setOnClickListener(this);
     }
 
     private void startActivity(Class cla) {
@@ -129,11 +135,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()) {
-
-            case R.id.fab_btn:
-                startActivity(CustomViewActivity.class);
-                break;
-        }
+//        switch (v.getId()) {
+//
+//            case R.id.fab_btn:
+//                startActivity(CustomViewActivity.class);
+//                break;
+//        }
     }
 }
