@@ -1,3 +1,3 @@
-include ':app', ':ecg'
+include ':app', ':ecg', ':lint', ':lint_aar'
 project(':app').projectDir = new File('app')
 project(':ecg').projectDir = new File('ecg')
