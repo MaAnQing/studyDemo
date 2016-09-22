@@ -25,6 +25,7 @@ import com.example.madroid.studydemo.ui.BottomSheetActivity;
 import com.example.madroid.studydemo.ui.CustomViewActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
+import com.example.madroid.studydemo.ui.RxFluxActivity;
 import com.example.madroid.studydemo.ui.ScrollViewActivity;
 import com.example.madroid.studydemo.ui.StikkyHeaderActivity;
 import com.example.madroid.studydemo.ui.SurfaceViewActivity;
@@ -113,6 +114,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     case 16:
                         startActivity(BottomSheetActivity.class);
+                        break;
+
+                    case 17:
+                        startActivity(RxFluxActivity.class);
                         break;
 
                     default:

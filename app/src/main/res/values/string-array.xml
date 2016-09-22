@@ -18,6 +18,7 @@
         <item>Recycler view demo</item>
         <item>Rx java demo</item>
         <item>Bottom sheet</item>
+        <item>RxFlux</item>
     </string-array>
 
     <string-array name="stikky_header_title">

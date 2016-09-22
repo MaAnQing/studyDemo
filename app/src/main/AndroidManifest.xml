@@ -96,7 +96,8 @@
             android:name=".recyclerView.RecyclerDemoActivity"
             android:label="@string/title_activity_recycler_demoe" />
         <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".ui.BottomSheetActivity"></activity>
+        <activity android:name=".ui.BottomSheetActivity" />
+        <activity android:name=".ui.RxFluxActivity"></activity>
     </application>
 
 </manifest>
