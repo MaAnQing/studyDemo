@@ -99,7 +99,8 @@
         <activity android:name=".ui.BottomSheetActivity" />
         <activity android:name=".ui.RxFluxActivity" />
         <activity android:name=".ui.BottomSheetMainActivity" />
-        <activity android:name=".ui.BottomSheetListActivity"></activity>
+        <activity android:name=".ui.BottomSheetListActivity" />
+        <activity android:name=".ui.BottomSheetRecyclerActivity"></activity>
     </application>
 
 </manifest>

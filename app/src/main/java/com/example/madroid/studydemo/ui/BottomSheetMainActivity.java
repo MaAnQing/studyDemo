@@ -22,4 +22,8 @@ public class BottomSheetMainActivity extends AppCompatActivity {
     public void ListView(View view) {
         startActivity(new Intent(this, BottomSheetListActivity.class));
     }
+
+    public void RecyclerView(View view) {
+        startActivity(new Intent(this, BottomSheetRecyclerActivity.class));
+    }
 }
