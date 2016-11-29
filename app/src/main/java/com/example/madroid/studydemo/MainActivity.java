@@ -22,6 +22,7 @@ import com.example.madroid.studydemo.okhttp.OkHttpActivity;
 import com.example.madroid.studydemo.recyclerView.RecyclerDemoActivity;
 import com.example.madroid.studydemo.rxjava.RxJavaActivity;
 import com.example.madroid.studydemo.ui.BottomSheetActivity;
+import com.example.madroid.studydemo.ui.BottomSheetMainActivity;
 import com.example.madroid.studydemo.ui.CustomViewActivity;
 import com.example.madroid.studydemo.ui.RecyclerViewActivity;
 import com.example.madroid.studydemo.ui.RippleBackgroundActivity;
@@ -113,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         break;
 
                     case 16:
-                        startActivity(BottomSheetActivity.class);
+                        startActivity(BottomSheetMainActivity.class);
                         break;
 
                     case 17:
